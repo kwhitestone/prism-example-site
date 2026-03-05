@@ -1,0 +1,4 @@
+[submodule "prism-fusion"]
+	path = prism-fusion
+	url = git@github.com:kwhitestone/prism-fusion.git
+	branch = master
