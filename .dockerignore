@@ -1,0 +1,43 @@
+# ==================================================
+# Docker 构建忽略文件（prism-example-site）
+# build context: 项目根目录
+# 仅保留 app/ 与 prism-fusion/ 构建所需内容
+# ==================================================
+
+# ---- Git / VCS ----
+.git/
+.gitignore
+.gitattributes
+.gitmodules
+**/.git/
+
+# ---- 环境变量 ----
+.env
+.env.example
+
+# ---- 文档 ----
+README.md
+**/*.md
+
+# ---- IDE / 编辑器 ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---- Node.js 依赖（构建时重新安装）----
+**/node_modules/
+
+# ---- 前端构建产物（构建时重新生成）----
+app/src/admin/dist/
+
+# ---- Go 运行时文件 ----
+app/src/server/log/
+app/src/server/*.db
+app/src/server/__debug_bin*
+**/*.exe
+
+# ---- 操作系统 ----
+.DS_Store
+Thumbs.db
